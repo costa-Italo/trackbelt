@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  background-color: #2C2D31;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container .login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  position: absolute;
+  top: 175px;
+}
+
+.track {
+  color: white;
+  font-size: 30px;
+}
+
+.belt {
+  color:#E73557;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+}
+.container .login .form {
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #E73557;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.forgot-password{
+  color: white;
+  display: flex;
+  margin-top: 15px;
+}
