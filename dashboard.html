@@ -1,26 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Área logada - Trackbelt</title>
 </head>
 
 <body>
+<header>
+    Trackbelt 1.0
+</header>
+    <main>
+        <div class="title">
+            <h2>Alunos</h2>
+            <span>Lista de alunos</span>
+        </div>
 
-    <table class="students-table">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Cor da Faixa</th>
-                <th>Última graduação</th>
-                <th>Aulas</th>
-            </tr>
-        </thead>
-    </table>
+        <div class="card">
+            <div class="line-input">
+                <label>Aluno</label>
+                <input type="text" id="aluno"  placeholder="Nome do aluno">
+            </div>
 
- <script src="/app/students.js"></script>
- <script src="/app/table.js"></script>
+            <div class="line-input">
+                <label>Categoria</label>
+                <select name="categoria" id="categoria">
+                    <option value=""></option>
+                    <option value="kids">Kids</option>
+                    <option value="adulto">Adulto</option>
+                </select>
+            </div>
+
+            <div class="line-input">
+                <label>Faixa</label>
+                <select name="faixa" id="faixa">
+                    <option value=""></option>
+                    <option value="branca">Branca</option>
+                    <option value="cinza">Cinza</option>
+                    <option value="azul">Azul</option>
+                    <option value="roxa">Roxa</option>
+                    <option value="marrom">Marrom</option>
+                    <option value="preta">Preta</option>
+                </select>   
+            </div>
+
+            <div class="line-input">
+                <label>Última graduação</label>
+                <input type="date" id="dataGraduacao">
+            </div>
+
+            <div class="line-input">
+                <label>Nº de aulas</label>
+                <input type="number" id="numeroAulas">
+            </div>
+
+            <button onclick="aluno.salvar()">Salvar</button>
+            <button onclick="aluno.cancelar()">Cancelar</button>
+        </div>
+
+        <div class="content">
+            <table>
+                <thead>
+                    <th>Nome do aluno</th>
+                    <th>Categoria</th>
+                    <th>Faixa</th>
+                    <th>Última graduação</th>
+                    <th>N° de aulas</th>
+                    <th class="center">Ações</th>
+                </thead>
+
+                <tbody id="tbody">
+                    
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+    </main>
+
+
+    
+
+<script src="./app/main.js"></script>
 </body>
+
 </html>
