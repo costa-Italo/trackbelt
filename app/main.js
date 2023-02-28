@@ -159,7 +159,7 @@ class Aluno {
 
         for(let i = 0; i < this.arrayAlunos.length; i++) {
             if(this.arrayAlunos[i].nomeDoAluno == nomeDoAluno) {
-                this.arrayAlunos.splice(i,1);
+                this.arrayAlunos.splice(i,nomeDoAluno);
                 tbody.deleteRow(i);
             }
         }        
