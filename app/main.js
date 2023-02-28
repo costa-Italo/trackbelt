@@ -1,7 +1,10 @@
+// Versão em funcionamento com função de salvar no localstorage
+
 class Aluno {
     constructor() {
-        this.arrayAlunos = [];
+        this.arrayAlunos = JSON.parse(localStorage.getItem('alunos')) || [];
         this.editAluno = null;
+        this.listaTabela();
     }
 
     salvar() {
@@ -17,6 +20,7 @@ class Aluno {
 
         this.listaTabela();
         this.cancelar();
+        localStorage.setItem('alunos', JSON.stringify(this.arrayAlunos));
     }
 
     listaTabela() {
@@ -81,21 +85,28 @@ class Aluno {
     }
 
     lerDados() {
-       let aluno = {}
-       
-       aluno.nomeDoAluno = document.getElementById('aluno').value;
-
-       aluno.categoria = document.getElementById('categoria').value;
-
-       aluno.faixa = document.getElementById('faixa').value;
-
-       aluno.dataGraduacao = document.getElementById('dataGraduacao').value;
-
-       aluno.numeroAulas = document.getElementById('numeroAulas').value;
-
+        let aluno = {}
     
-
-       return aluno;
+        aluno.nomeDoAluno = document.getElementById('aluno').value;
+    
+        aluno.categoria = document.getElementById('categoria').value;
+    
+        aluno.faixa = document.getElementById('faixa').value;
+    
+        aluno.dataGraduacao = document.getElementById('dataGraduacao').value;
+    
+        aluno.numeroAulas = document.getElementById('numeroAulas').value;
+    
+        // Lê os dados salvos no localStorage, se existirem
+        let alunosSalvos = JSON.parse(localStorage.getItem('alunos')) || [];
+    
+        // Adiciona o novo aluno ao array
+        alunosSalvos.push(aluno);
+    
+        // Salva o array atualizado no localStorage
+        localStorage.setItem('alunos', JSON.stringify(alunosSalvos));
+    
+        return aluno;
     }
 
     validaCampos(aluno) {
