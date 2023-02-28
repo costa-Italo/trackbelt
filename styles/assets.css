@@ -1,0 +1,14 @@
+:root {
+    --cor-de-fundo: #020030;
+    --cor-do-card: #292A48;
+    --fonte-principal: 'Poppins', sans-serif;
+    --cor-secundaria: #318A94;
+    --cor-de-fundo-login: #272D44;
+    --cor-do-botao: #016EB5;
+}
+
+body {
+    --cor-de-fundo: #020030;
+    font-family: var(--fonte-principal);
+}
+

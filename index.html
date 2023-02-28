@@ -7,24 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <title>Trackbelt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    
-    <div class="container">
-        <div class="login-container">
-            <div class="name">
-                <h1 class="track">track <span class="belt">BELT</span></h1>
-            </div>
-            <form class="login">
-                <input type="text" placeholder="Username" class="form" required="">
-                <input type="password" placeholder="Password" class="form" required="">
-                <button class="button"><a href="dashboard.html">Sign in</a></button>
-                <div class="forgot-password">
-                    <p> <a href="#" class="forgot-password">Forgot password?</a></p>
-                </div>
-            </form>
-        </div>
+<body>    
+   <div class="container">
+    <div class="login_container">
+        <p class="trackbelt">TRACKBELT</p>
     </div>
+
+    <form action="dashboard.html" class="login">
+        <input type="text" class="username" placeholder="Usuário" required>
+
+        <input type="password" placeholder="Digite sua senha" class="password" required>
+
+        <p class="forgot_password">Esqueceu sua senha?</p>
+
+        <input type="submit" value="LOGIN" class="button_login" href = "dashboard.html">
+
+        <p class="sign_up">Primeira vez aqui? <span class="sign_up_destaque"><a href="#"  class="sign_up_destaque">Cadastre-se</a></span></p>
+    </form>
+    
+
+
+   
+   </div>
+
+
 </body>
 </html>

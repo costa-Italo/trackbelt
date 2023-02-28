@@ -1,64 +1,65 @@
+body {
+  background-color: var(--cor-de-fundo-login);
+}
+
 .container {
-  display: flex;
-  background-color: #2C2D31;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
 }
 
-.login-container {
-  display:flex;
-  flex-direction: column;  
-  align-items: center;
-}
-
-.track {
+.trackbelt {
   color: white;
-  font-size: 30px;
-}
-
-.belt {
-  color:#E73557;
-  font-size: 30px;
-  font-weight: bold;
-  font-style: italic;
-}
-
-.container .login .form {
-  width: 250px;
-  height: 40px;
-  border-radius: 20px;
-  border: none;
+  font-size: 40px;
   text-align: center;
-  justify-content: center;
-  display: flex;
-  margin: 10px;
 }
 
-.button {
+.faca_login {
+  text-align: center;
+  margin-top: 5px;
+  color: var(--cor-secundaria);
+  font-weight: bolder;
+}
+
+.login {
+  margin-top: 30px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 15px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.username, .password {
+  padding: 10px;
   border-radius: 25px;
   border: none;
-  width: 100%;
+  text-align: left;
+  outline: none;
+}
+
+.forgot_password {
+  color: white;
+  font-size: 10px;
   text-align: center;
-  color: white;
-  font-weight: bold;
-  background-color: #E73557;
-  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
+.button_login {
+  background-color: var(--cor-do-botao);
+  color: white;
+  font-size: 17px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+}
+
+
+.sign_up, .sign_up_destaque {
   color: white;
 }
 
-.forgot-password{
-  color: white;
-  display: flex;
-  margin-top: 15px;
- justify-content: center;
+.sign_up_destaque {
+  text-decoration: underline;
 }
-  
