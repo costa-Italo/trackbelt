@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Área logada - Trackbelt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main_container">   
+    <div class="sidebar">
+        <div class="name_icon">
+            <div class="belt">
+                W
+            </div>  
+                trackBELT     
+        </div>
+        <div class="sidebar_list">
+            <ul class="sidebar_items">
+                <li class="sidebar_items"><a href="dashboard.html">Dashboard</li>
+
+                <li class="sidebar_items"><a href="alunos.html">Alunos</a></li>
+
+                <li class="sidebar_items"><a href ="financeiro.html">Financeiro</a></li>
+
+                 <li class="sidebar_items"><a href ="suporte.html">Suporte</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <div class="dashboard_header">
+            <p>Visão geral</p>
+            <input type="search" placeholder="Procure um aluno" class="search">
+        </div>
+
+        <!-- FORMULÁRIO DE ALUNOS -->
+        <div class="form">
+
+            <div class="nome_aluno">
+                <label>Aluno:</label>
+                <input type="text" id="aluno"  placeholder="Nome do aluno" class="aluno">
+            </div>
+
+            <div class="categoria_aluno">
+                <label>Categoria:</label>
+                <select name="categoria" id="categoria" class="categoria">
+                    <option value=""></option>
+                    <option value="kids">Kids</option>
+                    <option value="adulto">Adulto</option>
+                </select>
+            </div>
+
+            <!-- TABELA DE ALUNOS -->
+
+            <div class="line-input">
+                <label>Faixa:</label>
+                <select name="faixa" id="faixa" class="faixa">
+                    <option value=""></option>
+                    <option value="branca">Branca</option>
+                    <option value="cinza">Cinza</option>
+                    <option value="azul">Azul</option>
+                    <option value="roxa">Roxa</option>
+                    <option value="marrom">Marrom</option>
+                    <option value="preta">Preta</option>
+                </select>   
+            </div>
+
+            <div class="line-input">
+                <label>Última graduação:</label>
+                <input type="date" id="dataGraduacao" class="ultima_graduacao">
+            </div>
+
+            <div class="line-input">
+                <label>Nº de aulas</label>
+                <input type="number" id="numeroAulas" class="numero_de_aulas">
+            </div>
+
+            <button onclick="aluno.salvar()" id="btn-1" class="buttons">Salvar</button>
+
+            <button onclick="aluno.cancelar()" class="buttons">Cancelar</button>
+
+            <button onclick="aluno.ordenarPorAulas()" class="buttons">Classificar por aulas</button>
+
+        </div>
+
+        <div class="table">
+            <table class="table_content">
+                <thead class="table-header">
+                    <th>Nome do aluno</th>
+                    <th>Categoria</th>
+                    <th>Faixa</th>
+                    <th>Última graduação</th>
+                    <th>N° de aulas</th>
+                    <th class="center">Ações</th>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="./app/main.js"></script>
+</body>
+
+</html>

@@ -1,92 +1,99 @@
-body {
-    background-color: var(--cor-de-fundo);
-}
-
-.main_container {
+.header_cards {
+    width: 100%;
+    height: 100px;
+    background-color: var(--cor-do-card);
+    padding: 10px;
     display: flex;
     flex-direction: row;
-}
-
-.sidebar {
-    background-color: var(--cor-sidebar);
-    width: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-}
-
-.name_icon {
-    display: flex;
-    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
     align-items: center;
+}
+
+.card_alunos {
+background-color: var(--cor-card-alunos);
+    width: 15%;
+    height: 80%;
+    border-radius: 5px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.card_receita {
+    background-color: var(--cor-card-receita);
+        width: 15%;
+        height: 80%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.card_proxima_aula {
+        background-color: var(--cor-card-proxima-aula);
+            width: 15%;
+            height: 80%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+}
+
+.card_avisos {
+            background-color: var( --cor-card-avisos);
+                width: 15%;
+                height: 80%;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+}
+
+.texto_card {
+    display: flex;
     color: white;
-    gap: 5px;
-    font-size: 23px;
-    font-weight: bold;
-    padding: 5px;
+    font-weight: bolder;
 }
 
-.belt {
+.cards_container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--cor-de-fundo);
+    height: 45vh;
+    margin-top: 10px;
     align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background-color: var(--cor-azul-belt);
-    margin-left: 5px;
-    margin-top: 5px;
-    font-weight: bolder;
-    font-size: 25px;
-    color: black;
+}
+
+.faixa_dos_alunos {
+    width: 450px;
+    height: 250px;
+    background-color: var(--cor-do-card);
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.receita_despesa {
+    width: 450px;
+    height: 250px;
+    background-color: var(--cor-do-card);
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ultimo_card {
+    width: 1000px;
+    height: 250px;
+    background-color: var(--cor-do-card);
+    align-self: center;
     border-radius: 10px;
 }
-
-.sidebar_list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 25px;
-    align-items: center;
-    height: 100vh;
-    color: white;
-    font-size: 20px;
-}
-
-.sidebar_items {
-  padding: 15px;
-}
-
-.dashboard {
-    background-color: var(--cor-de-fundo);
-    width: 100%;
-    padding: 25px;
-}
-
-.dashboard_header {
-    color: white;
-    font-weight: bolder;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    height: 50px;
-    align-items: center;
-}
-
-.search {
-    width: 220px;
-    height: 30px;
-    text-align: center;
-    border-radius: 15px;
-    border: none;
-    background-color: var(--cor-sidebar);
-    color: white;
-}
-
-.dashboard {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-}
-

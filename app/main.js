@@ -1,4 +1,3 @@
-// Versão em funcionamento com função de salvar no localstorage
 
 class Aluno {
     constructor() {
@@ -153,18 +152,18 @@ class Aluno {
      }
      
 
-    deletar(nomeDoAluno) {
+     deletar(nomeDoAluno) {
         if(confirm('Deseja remover o aluno ' + nomeDoAluno +'?')) {
-            let tbody = document.getElementById('tbody')
-
-        for(let i = 0; i < this.arrayAlunos.length; i++) {
-            if(this.arrayAlunos[i].nomeDoAluno == nomeDoAluno) {
-                this.arrayAlunos.splice(i,nomeDoAluno);
-                tbody.deleteRow(i);
-            }
-        }        
+            this.arrayAlunos = this.arrayAlunos.filter(aluno => aluno.nomeDoAluno !== nomeDoAluno);
+            this.listaTabela();
+            localStorage.setItem('alunos', JSON.stringify(this.arrayAlunos));
         }
     }
+    
+    ordenarPorAulas() {
+        this.arrayAlunos.sort((a, b) => b.numeroAulas - a.numeroAulas);
+        this.listaTabela();
+      }
 } 
 
 var aluno = new Aluno();

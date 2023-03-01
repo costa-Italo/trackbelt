@@ -1,0 +1,35 @@
+
+.sidebar {
+    background-color: var(--cor-sidebar);
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    border-radius: 10px;
+}
+
+.sidebar_list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-size: 20px;
+}
+
+.sidebar_items {
+    padding: 15px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: var(--cor-card-proxima-aula);
+    font-weight: bolder;
+  }

@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+<!-- CABEÇALHO SIDEBAR -->
 
 <body>
     <div class="main_container">   
@@ -21,16 +22,23 @@
             </div>  
                 trackBELT     
         </div>
+
+<!-- MENU SIDEBAR -->
+
         <div class="sidebar_list">
             <ul class="sidebar_items">
-                <li class="sidebar_items">Home</li>
-                <li class="sidebar_items">Alunos</li>
-                <li class="sidebar_items">Dashboard</li>
-                <li class="sidebar_items">Financeiro</li>
-                <li class="sidebar_items">Suporte</li>
+                <li class="sidebar_items"><a href="dashboard.html">Dashboard</li>
+
+                <li class="sidebar_items"><a href="alunos.html">Alunos</a></li>
+
+                <li class="sidebar_items"><a href ="financeiro.html">Financeiro</a></li>
+
+                 <li class="sidebar_items"><a href ="suporte.html">Suporte</a></li>
             </ul>
         </div>
     </div>
+
+    <!-- CABEÇALHO -->
 
     <div class="dashboard">
         <div class="dashboard_header">
@@ -38,69 +46,73 @@
             <input type="search" placeholder="Procure um aluno" class="search">
         </div>
 
-        <!-- TABELA -->
-        <div class="form">
+        <!-- HEADER CARDS -->
 
-            <div class="nome_aluno">
-                <label>Aluno:</label>
-                <input type="text" id="aluno"  placeholder="Nome do aluno" class="aluno">
+        <div class="header_cards">
+
+            <div class="card_alunos">
+                <p class="texto_card">N° de Alunos</p>
             </div>
 
-            <div class="categoria_aluno">
-                <label>Categoria:</label>
-                <select name="categoria" id="categoria" class="categoria">
-                    <option value=""></option>
-                    <option value="kids">Kids</option>
-                    <option value="adulto">Adulto</option>
-                </select>
+            <div class="card_receita">
+                <p class="texto_card">Receita</p>
             </div>
 
-            <div class="line-input">
-                <label>Faixa:</label>
-                <select name="faixa" id="faixa" class="faixa">
-                    <option value=""></option>
-                    <option value="branca">Branca</option>
-                    <option value="cinza">Cinza</option>
-                    <option value="azul">Azul</option>
-                    <option value="roxa">Roxa</option>
-                    <option value="marrom">Marrom</option>
-                    <option value="preta">Preta</option>
-                </select>   
+            <div class="card_proxima_aula">
+                <p class="texto_card">Próxima aula:</p>
             </div>
 
-            <div class="line-input">
-                <label>Última graduação:</label>
-                <input type="date" id="dataGraduacao" class="ultima_graduacao">
+            <div class="card_avisos">
+                <p class="texto_card">Avisos</p>
             </div>
 
-            <div class="line-input">
-                <label>Nº de aulas</label>
-                <input type="number" id="numeroAulas" class="numero_de_aulas">
-            </div>
-
-            <button onclick="aluno.salvar()" id="btn-1" class="buttons">Salvar</button>
-
-            <button onclick="aluno.cancelar()" class="buttons">Cancelar</button>
         </div>
 
-        <div class="table">
-            <table class="table_content">
-                <thead class="table-header">
-                    <th>Nome do aluno</th>
-                    <th>Categoria</th>
-                    <th>Faixa</th>
-                    <th>Última graduação</th>
-                    <th>N° de aulas</th>
-                    <th class="center">Ações</th>
-                </thead>
-                <tbody id="tbody">
-                </tbody>
-            </table>
+
+        <!-- CARDS CONTAINER -->
+        <div class="cards_container">
+
+<!-- SESSÃO CARD FAIXA VS QUANTIDADE -->
+        <div class="faixa_dos_alunos">
+
+            <div>
+            <p>Gráfico fx_branca</p>
         </div>
+
+        <div>
+            <p>Gráfico fx_cinza</p>
+        </div>
+
+        <div>
+            <p>Gráfico fx_azul</p>
+        </div>
+
+        <div>
+            <p>Gráfico fx_roxa</p>
+        </div>
+
+        <div>
+            <p>Gráfico fx_marom</p>
+        </div>
+
+        <div>
+            <p>Gráfico fx_preta</p>
+        </div>
+
+        </div>
+
+
+        <!-- GRÁFICO RECEITA E DESPESA -->
+        <div class="receita_despesa">
+            <p> RECEITA Vs DESPESA</p>
+        </div>
+    </div>
+
+
+    <div class="ultimo_card">
+        <p> ALGUMA OUTRA COISA</p>
     </div>
 </div>
 
-<script src="./app/main.js"></script>
 </body>
-
 </html>
